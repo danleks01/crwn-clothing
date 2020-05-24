@@ -1,0 +1,62 @@
+.menu-item:nth-child(1) 
+  grid-area: hats
+
+.menu-item:nth-child(2)
+  grid-area: jackets
+ 
+.menu-item:nth-child(3)
+  grid-area: sneakers
+  
+.menu-item:nth-child(4)
+  grid-area: women
+ 
+.menu-item:nth-child(5)
+  grid-area: men
+
+.menu-item
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  border: 1px solid black
+  overflow: hidden
+
+  &.large 
+    height: 500px
+
+  &:hover
+    cursor: pointer
+
+    .background-img
+      transform: scale(1.1)
+      transition: transform 6s cubic-bezier(.25, .45, .45, .95)
+
+    .content
+      opacity: .9  
+  
+
+.content 
+  width: 110px
+  height: 100px
+  text-align: center
+  background-color: white
+  opacity: .7
+
+.title 
+  font-weight: bold
+  margin-bottom: 6px
+  font-size: 22px
+  color: #4a4a4a
+  text-transform: uppercase
+    
+.subtitle
+  font-weight: lighter
+  font-size: 16px;
+  text-transform: uppercase
+
+.background-img
+  width: 100%
+  height: 100%
+  position: absolute
+  background-position: center
+  background-size: cover
